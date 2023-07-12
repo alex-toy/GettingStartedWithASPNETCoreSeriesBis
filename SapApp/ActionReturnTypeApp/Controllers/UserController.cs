@@ -25,5 +25,14 @@ namespace ActionReturnTypeApp.Controllers
             IEnumerable<User> users = _userService.Get(prefix);
             return users;
         }
+
+        [HttpGet("usersaction")]
+        public IActionResult GetAction(string prefix = "")
+        {
+            if (string.IsNullOrEmpty(prefix)) return new BadRequestResult();
+
+            IEnumerable<User> users = _userService.Get(prefix);
+            return new OkObjectResult(users);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Spa.Business.Models;
+using Spa.Business.Repos;
 using Spa.DAL.Mappers;
 using Spa.DAL.POCOS;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 
 namespace Spa.DAL.Repos
 {
-    public class UserRepo
+    public class UserRepo : IUserRepo
     {
         public IEnumerable<User> Get(string prefix)
         {
@@ -15,9 +16,9 @@ namespace Spa.DAL.Repos
             bool hasPrefix = !string.IsNullOrEmpty(prefix);
             IEnumerable<UserDb> selectedUserDbs = hasPrefix ? userDbs.Where(p => p.Name.StartsWith(prefix)) : userDbs;
 
-            IEnumerable<User> products = selectedUserDbs.Map();
+            IEnumerable<User> users = selectedUserDbs.Map();
 
-            return products;
+            return users;
         }
 
         private static List<UserDb> GetAll()

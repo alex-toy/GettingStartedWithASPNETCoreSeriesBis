@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Spa.Business.Repos;
+using Spa.Business.Services;
+using Spa.DAL.Repos;
 
 namespace ActionReturnTypeApp
 {
@@ -23,11 +26,19 @@ namespace ActionReturnTypeApp
 
             services.AddControllersWithViews();
 
+            services.AddControllersWithViews().AddJsonOptions(jsonOptions =>
+            {
+                jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
+
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserRepo, UserRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

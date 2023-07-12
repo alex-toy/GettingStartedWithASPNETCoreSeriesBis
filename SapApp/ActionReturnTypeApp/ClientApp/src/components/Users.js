@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
-  static displayName = FetchData.name;
+export class Users extends Component {
+  static displayName = Users.name;
 
   constructor(props) {
     super(props);
@@ -38,7 +38,7 @@ export class FetchData extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
-      : FetchData.renderForecastsTable(this.state.users);
+      : Users.renderForecastsTable(this.state.users);
 
     return (
       <div>
@@ -50,7 +50,7 @@ export class FetchData extends Component {
   }
 
   async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+      const response = await fetch('User/users');
     const data = await response.json();
     this.setState({ users: data, loading: false });
   }
