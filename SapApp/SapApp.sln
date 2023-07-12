@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapApp", "SapApp\SapApp.csproj", "{F2E78BED-2E29-44C1-9ED6-E30F8F51AEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SapApp", "SapApp\SapApp.csproj", "{F2E78BED-2E29-44C1-9ED6-E30F8F51AEA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spa.Business", "Spa.Business\Spa.Business.csproj", "{6E2463B3-3D37-4EC8-8500-CF9AC4FA2445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spa.Business", "Spa.Business\Spa.Business.csproj", "{6E2463B3-3D37-4EC8-8500-CF9AC4FA2445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spa.DAL", "Spa.DAL\Spa.DAL.csproj", "{A871B652-21A8-4CBA-99CF-A52D40C634B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spa.DAL", "Spa.DAL\Spa.DAL.csproj", "{A871B652-21A8-4CBA-99CF-A52D40C634B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionReturnTypeApp", "ActionReturnTypeApp\ActionReturnTypeApp.csproj", "{7D209560-F437-4934-A105-B7DFF762AC22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A871B652-21A8-4CBA-99CF-A52D40C634B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A871B652-21A8-4CBA-99CF-A52D40C634B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A871B652-21A8-4CBA-99CF-A52D40C634B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D209560-F437-4934-A105-B7DFF762AC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D209560-F437-4934-A105-B7DFF762AC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D209560-F437-4934-A105-B7DFF762AC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D209560-F437-4934-A105-B7DFF762AC22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
