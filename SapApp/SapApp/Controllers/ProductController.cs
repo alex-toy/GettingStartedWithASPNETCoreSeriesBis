@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Spa.Business.Models;
 using Spa.Business.Services;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace SapApp.Controllers
 {
@@ -34,10 +35,36 @@ namespace SapApp.Controllers
         }
 
         [HttpGet("productscheaperthan")]
-        public IEnumerable<Product> GetproductsCheaperThan(double threshold)
+        public IEnumerable<Product> GetProductsCheaperThan(double threshold)
         {
             IEnumerable<Product> products = _productService.GetproductsCheaperThan(threshold);
             return products;
+        }
+
+        [HttpGet("productsjson")]
+        public IActionResult GetJson(string prefix = "")
+        {
+            IEnumerable<Product> products = _productService.Get(prefix);
+
+            JsonSerializerOptions options = new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            return new JsonResult(products, options);
+        }
+
+        [HttpGet("ok/{format?}")]
+        [FormatFilter]
+        public IActionResult GetOk(string prefix = "")
+        {
+            IEnumerable<Product> products = _productService.Get(prefix);
+            return Ok(products);
+        }
+
+        [HttpGet("xmlonly")]
+        [FormatFilter]
+        [Produces("application/xml")]
+        public IActionResult GetXmlOnly(string prefix = "")
+        {
+            IEnumerable<Product> products = _productService.Get(prefix);
+            return Ok(products);
         }
     }
 }

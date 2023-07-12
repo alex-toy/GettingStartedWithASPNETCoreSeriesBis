@@ -24,13 +24,19 @@ namespace SapApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddControllersWithViews().AddNewtonsoftJson();
+
+            services.AddControllersWithViews().AddXmlSerializerFormatters();
 
             services.AddControllersWithViews().AddJsonOptions(jsonOptions =>
             {
                 jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
             });
 
-            services.AddMvc(options => Console.WriteLine(options));
+            //services.AddMvc(options =>
+            //{
+            //    options.ReturnHttpNotAcceptable = true;
+            //});
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

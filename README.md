@@ -9,3 +9,8 @@ ASP NET Core offers different return types for the Web API Controllers. Each of 
     3. Generic ActionResult
 
 In this project, we will dive into each of these return types and when it's most appropriate to use each return type.
+
+### Install packages
+```
+Microsoft.AspNetCore.Mvc.Newtonsoft
+```
