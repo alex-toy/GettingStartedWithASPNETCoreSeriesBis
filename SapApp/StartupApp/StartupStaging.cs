@@ -8,9 +8,9 @@ using Microsoft.Extensions.Hosting;
 
 namespace StartupApp
 {
-    public class Startup
+    public class StartupStaging
     {
-        public Startup(IConfiguration configuration)
+        public StartupStaging(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -71,3 +71,4 @@ namespace StartupApp
         }
     }
 }
+    

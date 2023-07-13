@@ -20,7 +20,7 @@ namespace StartupApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup(typeof(Startup).Assembly.FullName);
                 });
     }
 }
