@@ -30,3 +30,8 @@ Sometimes, you might want to allow other sites to make cross-origin requests to 
 In this project, we will learn about CORS, how it works, how to enable it in ASP NET API, how to simulate a CORS error in ASP NET Single Page Application and then add the appropriate configuration to ease the browser policies using CORS. 
 
 CORS is not a security feature, It is a W3C standard to relax same-origin policy. However if configured incorrectly CORS can cause potential issues to your application. Make sure to be explicit about the origins that can interact with the API that you are building.
+
+- start the react application from a differnet port
+```
+$env:PORT=4000; npm start
+```

@@ -17,23 +17,31 @@ namespace CorsApp.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        public IEnumerable<WeatherForecast> WeatherForecasts { get; set; }
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            var rng = new Random();
+            WeatherForecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Id = index,
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            });
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return WeatherForecasts;
+        }
+
+        [HttpDelete]
+        public void Delete(int id)
+        {
+            WeatherForecasts = WeatherForecasts.Where(x => x.Id != id).ToList();    
         }
     }
 }

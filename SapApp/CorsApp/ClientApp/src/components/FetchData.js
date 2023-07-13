@@ -12,11 +12,16 @@ export class FetchData extends Component {
     this.populateWeatherData();
   }
 
+  static async deleteForecast(id){
+    await fetch(`https://localhost:5001/WeatherForecast?id=${id}`, { method : "DELETE" });
+  }
+
   static renderForecastsTable(forecasts) {
     return (
       <table className='table table-striped' aria-labelledby="tabelLabel">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Date</th>
             <th>Temp. (C)</th>
             <th>Temp. (F)</th>
@@ -26,10 +31,12 @@ export class FetchData extends Component {
         <tbody>
           {forecasts.map(forecast =>
             <tr key={forecast.date}>
+              <td>{forecast.id}</td>
               <td>{forecast.date}</td>
               <td>{forecast.temperatureC}</td>
               <td>{forecast.temperatureF}</td>
               <td>{forecast.summary}</td>
+              <td><button onClick={() => FetchData.deleteForecast(forecast.id)}>Delete</button></td>
             </tr>
           )}
         </tbody>
@@ -51,8 +58,16 @@ export class FetchData extends Component {
     );
   }
 
+  async getWeatherData(){
+    return await fetch('https://localhost:5001/WeatherForecast', {
+      headers : {
+        Authorization : "Bearer MYTOKEN"
+      }
+    });
+  }
+
   async populateWeatherData() {
-    const response = await fetch('https://localhost:5001/WeatherForecast');
+    const response = await this.getWeatherData();
     const data = await response.json();
     this.setState({ forecasts: data, loading: false });
   }

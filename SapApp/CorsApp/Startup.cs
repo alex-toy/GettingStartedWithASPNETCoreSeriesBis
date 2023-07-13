@@ -34,7 +34,10 @@ namespace CorsApp
                 options.AddDefaultPolicy(builder =>
                 {
                     string[] origins = Configuration.GetSection("AllowedOrigins").Get<string[]>();
-                    builder.WithOrigins(origins);
+                    builder
+                        .WithOrigins(origins)
+                        .WithHeaders("Authorization")
+                        .WithMethods("GET", "POST", "DELETE");
                 });
             });
         }
