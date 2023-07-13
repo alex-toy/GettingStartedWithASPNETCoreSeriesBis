@@ -35,3 +35,8 @@ CORS is not a security feature, It is a W3C standard to relax same-origin policy
 ```
 $env:PORT=4000; npm start
 ```
+
+
+## Startup class in ASP.NET Core
+
+The Startup class in ASP NET Core configures services and the app's request pipeline. It uses various conventions to setup up the application and the corresponding services. In this project, we will take a deep dive into the whole Startup process and understand the different conventions and how it fits into the whole ASP NET Application cycle.
