@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -33,12 +34,14 @@ namespace CorsApp.Controllers
         }
 
         [HttpGet]
+        [DisableCors]
         public IEnumerable<WeatherForecast> Get()
         {
             return WeatherForecasts;
         }
 
         [HttpDelete]
+        [EnableCors("SpecificOrigin")]
         public void Delete(int id)
         {
             WeatherForecasts = WeatherForecasts.Where(x => x.Id != id).ToList();    

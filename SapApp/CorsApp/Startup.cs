@@ -39,6 +39,10 @@ namespace CorsApp
                         .WithHeaders("Authorization")
                         .WithMethods("GET", "POST", "DELETE");
                 });
+
+                options.AddPolicy("SpecificOrigin", builder => builder
+                                                                .WithOrigins("http://localhost:2020")
+                                                                .WithHeaders("Authorization"));
             });
         }
 
@@ -65,6 +69,7 @@ namespace CorsApp
 
             app.UseRouting();
             app.UseCors();
+            //app.UseCors("SpecificOrigin");
 
             app.UseEndpoints(endpoints =>
             {
