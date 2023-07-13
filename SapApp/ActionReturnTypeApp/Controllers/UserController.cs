@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Spa.Business.Models;
 using Spa.Business.Services;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ActionReturnTypeApp.Controllers
 {
@@ -27,12 +29,19 @@ namespace ActionReturnTypeApp.Controllers
         }
 
         [HttpGet("usersaction")]
-        public IActionResult GetAction(string prefix = "")
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        //[ProducesResponseType(StatusCodes.Status200OK, Type =typeof(IEnumerable<User>))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<IEnumerable<User>> GetAction(string prefix = "")
         {
-            if (string.IsNullOrEmpty(prefix)) return new BadRequestResult();
+            if (string.IsNullOrEmpty(prefix)) return BadRequest("prefix should not be null");
 
             IEnumerable<User> users = _userService.Get(prefix);
-            return new OkObjectResult(users);
+
+            if (!users.Any()) return NotFound("no users have been found");
+
+            return users.ToList();
         }
     }
 }
