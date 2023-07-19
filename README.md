@@ -45,3 +45,11 @@ The Startup class in ASP NET Core configures services and the app's request pipe
 ## Secret Manager in ASP.NET Core
 
 Most applications that we build these days rely on secrets to perform certain operations. These secrets could include API keys, database credentials, third-party service credentials, etc. In ASP.NET projects application secrets are often stored within configuration files such as web.config or appsettings.json. However one of the first recommendations of secure coding practices is to Never store passwords or other sensitive data as part of the source code. So how do you solve this problem of not having sensitive information in your configuration file, but still have a seamless local development experience when developing ASP NET Applications.
+
+- right clic on the project and select *Manage User Sercrets*
+<img src="/pictures/user_secret.png" title="user secret"  width="400">
+
+- put the secrets inside that file
+
+- the app still works, but the secret is nowhere to be found in the repo
+<img src="/pictures/user_secret2.png" title="user secret"  width="400">
