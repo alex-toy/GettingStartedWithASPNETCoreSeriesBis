@@ -51,5 +51,17 @@ Most applications that we build these days rely on secrets to perform certain op
 
 - put the secrets inside that file
 
+- you can also use the following command
+```
+dotnet user-secrets init
+dotnet user-secrets set "secrets:key" "9c9d2ab2daa4497bb3f175429231907"
+dotnet user-secrets remove "secrets:key"
+```
+
 - the app still works, but the secret is nowhere to be found in the repo
 <img src="/pictures/user_secret2.png" title="user secret"  width="400">
+
+
+## Jwt Authentication in ASP.NET Core
+
+When building applications we often want to control access to it. The process of securing your application is commonly referred to as authentication and authorization. In this project, we will learn how to protect your ASP NET Core Web API using JWT Bearer Token. We will be using Azure Active Directory as our identity provider and see how to integrate with it from our application and how everything works together.
