@@ -40,3 +40,8 @@ $env:PORT=4000; npm start
 ## Startup class in ASP.NET Core
 
 The Startup class in ASP NET Core configures services and the app's request pipeline. It uses various conventions to setup up the application and the corresponding services. In this project, we will take a deep dive into the whole Startup process and understand the different conventions and how it fits into the whole ASP NET Application cycle.
+
+
+## Secret Manager in ASP.NET Core
+
+Most applications that we build these days rely on secrets to perform certain operations. These secrets could include API keys, database credentials, third-party service credentials, etc. In ASP.NET projects application secrets are often stored within configuration files such as web.config or appsettings.json. However one of the first recommendations of secure coding practices is to Never store passwords or other sensitive data as part of the source code. So how do you solve this problem of not having sensitive information in your configuration file, but still have a seamless local development experience when developing ASP NET Applications.
