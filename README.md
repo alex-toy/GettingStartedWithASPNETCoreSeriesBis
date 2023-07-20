@@ -59,9 +59,34 @@ dotnet user-secrets remove "secrets:key"
 ```
 
 - the app still works, but the secret is nowhere to be found in the repo
-<img src="/pictures/user_secret2.png" title="user secret"  width="400">
+<img src="/pictures/user_secret2.png" title="user secret"  width="900">
 
 
 ## Jwt Authentication in ASP.NET Core
 
 When building applications we often want to control access to it. The process of securing your application is commonly referred to as authentication and authorization. In this project, we will learn how to protect your ASP NET Core Web API using JWT Bearer Token. We will be using Azure Active Directory as our identity provider and see how to integrate with it from our application and how everything works together.
+
+- create an *App Registration*
+<img src="/pictures/app_registration.png" title="app registration"  width="900">
+
+- Install packages
+```
+Microsoft.Identity.Web
+```
+
+- configure the *AzureAd* section. Grab the client and tenant id in the portal
+<img src="/pictures/app_registration2.png" title="app registration"  width="900">
+
+- at this point, the API is successfully protected against unauthenticated calls
+<img src="/pictures/app_registration3.png" title="app registration"  width="900">
+
+- Send the sign-in request
+```
+https://login.microsoftonline.com/{tenant}/oauth2/v2.0/authorize?
+client_id=XXXXXXXXXXXX
+&response_type=token
+&scope=openid
+&response_mode=fragment
+&state=12345
+&nonce=678910
+```
