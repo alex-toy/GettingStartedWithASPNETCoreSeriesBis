@@ -119,6 +119,10 @@ Let's build the *build pipeline* using the assistant :
 <img src="/pictures/build_pipeline.png" title="build pipeline"  width="900">
 
 - add *build* task
+```
+**/MessageSender.Function.csproj
+--output $(Build.BinariesDirectory)/publish_output --configuration Release
+```
 <img src="/pictures/build_pipeline2.png" title="build pipeline"  width="900">
 
 - add *archive* task
@@ -131,3 +135,6 @@ Let's build the *build pipeline* using the assistant :
 
 - save pipeline
 <img src="/pictures/build_pipeline7.png" title="build pipeline"  width="900">
+
+- run pipeline
+<img src="/pictures/build_pipeline8.png" title="build pipeline"  width="900">
