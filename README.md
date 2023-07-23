@@ -146,3 +146,6 @@ Let's build the *build pipeline* using the assistant :
 Now that the build pipeline is set up, we can move to the release pipeline.
 
 ### Create Release Pipeline
+
+- choose *Deploy a function app to Azure Functions*
+<img src="/pictures/release_pipeline.png" title="release pipeline"  width="900">
