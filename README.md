@@ -118,5 +118,13 @@ Let's build the *build pipeline* using the assistant :
 - in the assistant, use *.NET Core*
 <img src="/pictures/build_pipeline.png" title="build pipeline"  width="900"> 
 
-- add build task
+- add *build* task
 <img src="/pictures/build_pipeline2.png" title="build pipeline"  width="900"> 
+
+- add *archive* task
+<img src="/pictures/build_pipeline3.png" title="build pipeline"  width="900">
+<img src="/pictures/build_pipeline4.png" title="build pipeline"  width="900">
+
+- add *publish artifact* task
+<img src="/pictures/build_pipeline5.png" title="build pipeline"  width="900">
+<img src="/pictures/build_pipeline6.png" title="build pipeline"  width="900">
