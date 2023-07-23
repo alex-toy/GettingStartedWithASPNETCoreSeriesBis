@@ -97,3 +97,6 @@ Azure Functions is a serverless compute service that lets you run event-triggere
 
 - create an *HTTP Triggered Function*
 <img src="/pictures/az_function.png" title="azure function"  width="900"> 
+
+- call the function and get the environment
+<img src="/pictures/az_function2.png" title="azure function"  width="900"> 

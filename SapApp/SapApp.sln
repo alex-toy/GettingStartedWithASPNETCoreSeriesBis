@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorsApp", "CorsApp\CorsApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StartupApp", "StartupApp\StartupApp.csproj", "{EBECED6C-BC8D-46EC-ADED-23E95309AA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretManagerApp", "SecretManagerApp\SecretManagerApp.csproj", "{838BF028-35DA-44B8-A25F-4C4FFCB3F8B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecretManagerApp", "SecretManagerApp\SecretManagerApp.csproj", "{838BF028-35DA-44B8-A25F-4C4FFCB3F8B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApp", "AuthenticationApp\AuthenticationApp.csproj", "{C82DD768-BDFC-4D33-BB2B-882AC66B0B18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApp", "AuthenticationApp\AuthenticationApp.csproj", "{C82DD768-BDFC-4D33-BB2B-882AC66B0B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSender.Function", "MessageSender.Function\MessageSender.Function.csproj", "{D2B263E1-CCC2-47FB-BE0E-2BAFB4A51F08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C82DD768-BDFC-4D33-BB2B-882AC66B0B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C82DD768-BDFC-4D33-BB2B-882AC66B0B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C82DD768-BDFC-4D33-BB2B-882AC66B0B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B263E1-CCC2-47FB-BE0E-2BAFB4A51F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B263E1-CCC2-47FB-BE0E-2BAFB4A51F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B263E1-CCC2-47FB-BE0E-2BAFB4A51F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B263E1-CCC2-47FB-BE0E-2BAFB4A51F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
