@@ -101,7 +101,7 @@ Azure Functions is a serverless compute service that lets you run event-triggere
 - call the function and get the environment
 <img src="/pictures/az_function2.png" title="azure function"  width="900"> 
 
-### Create Azure Pipeline
+### Create Build Pipeline
 
 <img src="/pictures/pipeline.png" title="azure pipeline"  width="900"> 
 
@@ -136,5 +136,13 @@ Let's build the *build pipeline* using the assistant :
 - save pipeline
 <img src="/pictures/build_pipeline7.png" title="build pipeline"  width="900">
 
-- run pipeline
+- run pipeline. The three previous tasks will be executed
 <img src="/pictures/build_pipeline8.png" title="build pipeline"  width="900">
+
+- we can see the publish artifact
+<img src="/pictures/build_pipeline9.png" title="build pipeline"  width="900">
+<img src="/pictures/build_pipeline10.png" title="build pipeline"  width="900">
+
+Now that the build pipeline is set up, we can move to the release pipeline.
+
+### Create Release Pipeline
