@@ -156,3 +156,6 @@ Now that the build pipeline is set up, we can move to the release pipeline.
 
 - enable *Continuous deployment trigger*
 <img src="/pictures/release_pipeline3.png" title="release pipeline"  width="900">
+
+- parameterize tasks
+<img src="/pictures/release_pipeline4.png" title="release pipeline"  width="900">
