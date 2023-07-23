@@ -4,9 +4,9 @@
 ## Controller Action return types in ASP.NET
 
 ASP NET Core offers different return types for the Web API Controllers. Each of these return types has its own use cases. The 3 main return types are
-    1. Specific Type
-    2. *IActionResult*
-    3. Generic *ActionResult*
+1. Specific Type
+2. *IActionResult*
+3. Generic *ActionResult*
 
 In this project, we will dive into each of these return types and when it's most appropriate to use each return type.
 
@@ -90,3 +90,7 @@ client_id=XXXXXXXXXXXX
 &state=12345
 &nonce=678910
 ```
+
+## Azure Functions
+
+Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. In this project, we will see how to set up a build deploy pipeline for your Azure Functions. We will set up a build pipeline which creates a build artifact that can be used in the Release pipeline. We will set up multiple environments (Dev and Test) and see how to progress the function through the different stages. The Azure Function uses an environment value, which we will set up using Azure Variable groups and pass it as Application settings to Azure infrastructure. 
