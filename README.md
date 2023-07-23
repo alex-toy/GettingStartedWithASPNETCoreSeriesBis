@@ -93,4 +93,7 @@ client_id=XXXXXXXXXXXX
 
 ## Azure Functions
 
-Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. In this project, we will see how to set up a build deploy pipeline for your Azure Functions. We will set up a build pipeline which creates a build artifact that can be used in the Release pipeline. We will set up multiple environments (Dev and Test) and see how to progress the function through the different stages. The Azure Function uses an environment value, which we will set up using Azure Variable groups and pass it as Application settings to Azure infrastructure. 
+Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure. In this project, we will see how to set up a build deploy pipeline for your Azure Functions. We will set up a build pipeline which creates a build artifact that can be used in the Release pipeline. We will set up multiple environments (Dev and Test) and see how to progress the function through the different stages. The Azure Function uses an environment value, which we will set up using Azure Variable groups and pass it as Application settings to Azure infrastructure.
+
+- create an *HTTP Triggered Function*
+<img src="/pictures/az_function.png" title="azure function"  width="900"> 
