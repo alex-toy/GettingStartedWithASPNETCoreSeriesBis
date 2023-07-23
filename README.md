@@ -100,3 +100,23 @@ Azure Functions is a serverless compute service that lets you run event-triggere
 
 - call the function and get the environment
 <img src="/pictures/az_function2.png" title="azure function"  width="900"> 
+
+### Create Azure Pipeline
+
+<img src="/pictures/pipeline.png" title="azure pipeline"  width="900"> 
+
+- choose *starter pipeline*
+<img src="/pictures/pipeline2.png" title="azure pipeline"  width="900"> 
+
+In order to set up the *build pipeline* we need three steps :
+1. build the project
+2. archive the output
+3. publish the artifacts so that we can later use them in the release pipeline
+
+Let's build the *build pipeline* using the assistant :
+
+- in the assistant, use *.NET Core*
+<img src="/pictures/build_pipeline.png" title="build pipeline"  width="900"> 
+
+- add build task
+<img src="/pictures/build_pipeline2.png" title="build pipeline"  width="900"> 
