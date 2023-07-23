@@ -149,3 +149,10 @@ Now that the build pipeline is set up, we can move to the release pipeline.
 
 - choose *Deploy a function app to Azure Functions*
 <img src="/pictures/release_pipeline.png" title="release pipeline"  width="900">
+<img src="/pictures/release_pipeline1.png" title="release pipeline"  width="900">
+
+- choose an artifact
+<img src="/pictures/release_pipeline2.png" title="release pipeline"  width="900">
+
+- enable *Continuous deployment trigger*
+<img src="/pictures/release_pipeline3.png" title="release pipeline"  width="900">
